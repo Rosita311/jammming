@@ -1,5 +1,7 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Tracklist from '../Tracklist/Tracklist;
 
 function App() {
   return (
@@ -21,5 +23,18 @@ function App() {
     </div>
   );
 }
+
+
+
+const App = () => {
+  const [searchResults, setSearchResults] = useState([]);
+    return ( 
+    <div>
+      <ResultsList tracks={searchResults} />
+    </div>;
+    );
+  }
+
+  export default App;
 
 export default App;
